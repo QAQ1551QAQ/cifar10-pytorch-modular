@@ -1,0 +1,27 @@
+# ==========================================
+# PyTorch Project .gitignore
+# ==========================================
+
+# 1. 权重模型与检查点（绝对不能传，本地自用）
+checkpoints/
+*.pth
+*.pt
+
+# 2. 数据集目录（由脚本自动下载，不纳入版本管理）
+data/
+
+# 3. Python 缓存与编译文件
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+
+# 4. 操作系统临时文件
+.DS_Store
+Thumbs.db
+
+# 5. 虚拟环境与 IDE 配置
+.venv/
+venv/
+.idea/
+.vscode/

@@ -2,26 +2,36 @@
 # PyTorch Project .gitignore
 # ==========================================
 
-# 1. 权重模型与检查点（绝对不能传，本地自用）
-checkpoints/
+# 1. 权重模型与检查点
+# 忽略 checkpoints/ 目录下所有的权重文件，但保留目录本身（或保留目录下的说明文件）
+checkpoints/*
+!checkpoints/.gitkeep
 *.pth
 *.pt
 
-# 2. 数据集目录（由脚本自动下载，不纳入版本管理）
-data/
+# 2. 数据集目录
+# 忽略 data/ 目录下自动下载的所有大型数据集，但保留目录结构
+data/*
+!data/.gitkeep
 
-# 3. Python 缓存与编译文件
+# 3. 运行日志目录
+logs/*
+!logs/.gitkeep
+*.log
+
+# 4. Python 缓存与字节码文件
 __pycache__/
 *.py[cod]
 *$py.class
 .ipynb_checkpoints/
 
-# 4. 操作系统临时文件
+# 5. 操作系统产生的临时文件
 .DS_Store
 Thumbs.db
 
-# 5. 虚拟环境与 IDE 配置
+# 6. 本地虚拟环境与 IDE 配置文件
 .venv/
 venv/
+env/
 .idea/
 .vscode/
